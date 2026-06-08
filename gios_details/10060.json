@@ -1,1 +1,1 @@
-{"stationId":10060,"pm25Latest":null,"pm10Latest":null,"hasPm25Sensor":false,"hasPm10Sensor":true,"pm25History":[],"pm10History":[]}
+{"stationId":10060,"pm25SensorIds":[],"pm10SensorIds":[],"pm25Latest":null,"pm10Latest":null,"hasPm25Sensor":false,"hasPm10Sensor":false,"pm25History":[],"pm10History":[]}
