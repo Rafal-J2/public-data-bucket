@@ -1,8 +1,8 @@
 {
-  "esaUpdatedAt": "2026-08-10T22:09:52.252Z",
+  "esaUpdatedAt": "2026-08-10T23:08:49.681Z",
   "giosDetailsUpdatedAt": "2026-06-08T14:38:06.296Z",
-  "giosStationsUpdatedAt": "2026-08-10T22:09:56.680Z",
-  "generatedAt": "2026-08-10T22:09:56.687Z",
+  "giosStationsUpdatedAt": "2026-08-10T23:09:42.415Z",
+  "generatedAt": "2026-08-10T23:09:42.426Z",
   "nextGiosDetailsRefreshAt": "2026-06-08T20:38:06.296Z",
   "config": {
     "esaHistoryWindowHours": 24,
@@ -16,14 +16,14 @@
     "esaHistoryShards": 64,
     "giosDetailsFiles": 288,
     "sizeBytes": {
-      "dane": 698795,
-      "giosStations": 97987,
-      "esaHistoryShards": 4823029,
-      "giosDetails": 102794
+      "dane": 698772,
+      "giosStations": 97986,
+      "esaHistoryShards": 4824990,
+      "giosDetails": 84803
     }
   },
   "giosSensorsUpdatedAt": "2026-08-10T00:07:40.187Z",
-  "giosMeasurementsUpdatedAt": "2026-08-10T21:23:35.421Z",
+  "giosMeasurementsUpdatedAt": "2026-08-10T23:09:42.412Z",
   "nextGiosSensorsRefreshAt": "2026-08-11T00:07:40.187Z",
-  "nextGiosMeasurementsRefreshAt": "2026-08-10T22:23:35.421Z"
+  "nextGiosMeasurementsRefreshAt": "2026-08-11T00:09:42.412Z"
 }
