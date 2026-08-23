@@ -1,8 +1,8 @@
 {
-  "esaUpdatedAt": "2026-08-23T17:50:24.590Z",
+  "esaUpdatedAt": "2026-08-23T18:01:38.791Z",
   "giosDetailsUpdatedAt": "2026-06-08T14:38:06.296Z",
-  "giosStationsUpdatedAt": "2026-08-23T17:50:26.819Z",
-  "generatedAt": "2026-08-23T17:50:26.827Z",
+  "giosStationsUpdatedAt": "2026-08-23T18:01:41.811Z",
+  "generatedAt": "2026-08-23T18:01:41.819Z",
   "nextGiosDetailsRefreshAt": "2026-06-08T20:38:06.296Z",
   "config": {
     "esaHistoryWindowHours": 24,
@@ -16,9 +16,9 @@
     "esaHistoryShards": 64,
     "giosDetailsFiles": 288,
     "sizeBytes": {
-      "dane": 698918,
+      "dane": 698865,
       "giosStations": 97975,
-      "esaHistoryShards": 6905896,
+      "esaHistoryShards": 6767151,
       "giosDetails": 92803
     }
   },
