@@ -1,0 +1,53 @@
+name: Update air quality data
+
+on:
+  schedule:
+    # Every 15 minutes, away from the full hour when GitHub delays most runs.
+    # GitHub Pages allows about 10 builds per hour, this gives 4.
+    - cron: '2-59/15 * * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write # commit the data to this repository
+  actions: write # keep the schedule enabled (see the last step)
+
+# One run at a time: overlapping runs would force-push over each other
+concurrency:
+  group: update-data
+  cancel-in-progress: false
+
+jobs:
+  update-and-publish:
+    runs-on: ubuntu-latest
+    steps:
+      # Only the latest commit: the data files from the previous run
+      - name: Checkout
+        uses: actions/checkout@v5
+        with:
+          fetch-depth: 1
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v5
+        with:
+          node-version: 22
+
+      - name: Fetch ESA and GIOŚ data
+        run: node .github/scripts/fetch_data.js
+
+      # Always a single commit without history, so the repository doesn't
+      # grow with every update
+      - name: Publish as a single commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git checkout --orphan publish
+          git add -A
+          git commit -q -m "Update air quality data"
+          git push --force origin publish:main
+
+      # GitHub turns off schedules in public repositories after 60 days
+      # without activity. Enabling the workflow again keeps it running.
+      - name: Keep the schedule enabled
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh api -X PUT "repos/${{ github.repository }}/actions/workflows/update_data.yml/enable"
